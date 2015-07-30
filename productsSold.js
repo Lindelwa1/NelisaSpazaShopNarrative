@@ -40,7 +40,7 @@ var fs = require("fs");
    return productList;
     };*/
 
-    exports.productsSold = function(fileName){
+    exports.productsSold= function(fileName){
         var productsMap = findProductsSold(fileName)
         return productsMap
     };
