@@ -27,11 +27,13 @@ describe("Find data in file", function(){
     });
 
      it('should return the most popular products', function(){
-             var mostPopularproduct = require("../mostPopularProducts");
+             var mostPopularproduct = require('../mostPopularProducts');
 
               var  mostpopular = mostPopularproduct.popularProduct("./files/Nelisa Sales History.csv");
-              var result = {name:'Mixed Sweets 5s', amt:172};
-              assert.deepEqual(result,mostpopular);
+              var resultsMap = {name:'Mixed Sweets 5s', amt:172};
+              //console.log(resultsMap);
+              assert.deepEqual(resultsMap,mostpopular);
+
 
 
      });
