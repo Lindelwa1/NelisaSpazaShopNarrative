@@ -6,7 +6,7 @@ var findMostPopularProducts = function ( fileName) {
 
     var productsMap = productsSold.productsSold(fileName);
 
-    var mostPopularProducts = {};
+    var expectedSalesPerCategory = {};
     var max = 0;
 
     for(var prop in productsMap){
