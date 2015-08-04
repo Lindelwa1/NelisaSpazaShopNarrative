@@ -39,7 +39,9 @@ describe("Find data in file", function(){
       it("it should return category name", function(){
         //assemble
         var categoryCalculations = require('../categoryCalculations');
+
         var salesPerCategory = categoryCalculations.getSalesPerCatergory('./files/Nelisa Sales History.csv');
+
         var expectedSalesPerCategory = {'Fruits': 228, 'Candies': 192, 'Soft Drinks':328, 'Dairy':267, 'Starch':275,'Toiletries':76,'Tin Food':180,'Gifts':28};
       // console.log(expectedSalesPerCategory)
         assert.deepEqual(salesPerCategory,expectedSalesPerCategory);  
@@ -49,19 +51,17 @@ describe("Find data in file", function(){
   
       
 
-    //   it("it should return category total", function(){
+     it("it should return category total", function(){
     //     //assemble
-    //     var categoryTotal = require('../categoryTotal');
+        var mostProfitableCategory = require('../mostProfitableCategory');
 
-    //     var expectedTotal=  {productName:'Soft Drinks',amt:328,};
-    //     // act
-    //     var salesPerCategory = categoryTotal.expectedTotal('./files/Nelisa Sales History.csv');
+        var profitableTotal = mostProfitableCategory.getTotalCatergory('./files/Nelisa Sales History.csv');
 
-        
-    //     //assert
-    //     assert.deepEqual(salesPerCategory, expectedSalesPerCategory);  
+        var expectedTotal=  {productName:'Soft Drinks',amt:328,};
+          // act
+           assert.deepEqual(profitableTotal, expectedTotal);  
 
-    // });
+     });
 
 });
 

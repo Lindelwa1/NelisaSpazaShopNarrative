@@ -2,7 +2,7 @@ var fs = require("fs");
 
 var productsSold = require('./productsSold');
 
-var findCategoryCalculations = function ( fileName){
+var findcategoryCalculations = function ( fileName){
    
 
     var getCatergories = {
@@ -37,9 +37,9 @@ var findCategoryCalculations = function ( fileName){
 
     	};
     	categoryMap[catergoryName] = categoryMap[catergoryName] + quantity;
+  
    
 	};
-
 	console.log(categoryMap);
     return categoryMap;
 };
